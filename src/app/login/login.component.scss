@@ -1,0 +1,123 @@
+/* src/app/login/login.component.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  width: 100%;
+  background: url('assets/login-image.jpg') no-repeat center center;
+  background-size: cover; /* Ensures the image covers the entire area */
+}
+
+.login-card {
+  background-color: white; /* Slightly transparent background for the card */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 100%;
+  margin-right: 900px;
+  max-width: 400px; /* Adjust based on your design */
+}
+
+.login-content {
+  padding: 0;
+}
+
+.login-content h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+.error-message {
+  color: #ff0000;
+  margin-top: 1rem;
+}
+
+/* src/styles.scss */
+.toast-bottom-right {
+  bottom: 10px;
+  right: 10px;
+}
+
+.info-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.info-icon {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  cursor: pointer;
+  border: 1px solid #007bff;
+  border-radius: 50%;
+  padding: 4px;
+  text-align: center;
+  width: 50px;
+  height: 24px;
+  line-height: 16px;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the icon */
+  left: 50%;
+  margin-left: -60px; /* Center the tooltip */
+  width: 150px;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.info-icon-container:hover .tooltip {
+  visibility: visible;
+}
+
+.login-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

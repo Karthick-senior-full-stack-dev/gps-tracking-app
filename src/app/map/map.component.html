@@ -1,0 +1,142 @@
+<!-- src/app/menu/menu.component.html -->
+<div class="container">
+    <header>
+        <div class="header-content">
+            <div class="logout">
+                <button (click)="back()">
+                    Back
+                </button>
+            </div>
+            <div class="title">
+                <h2>Polyline Map - {{deviceId}}</h2>
+            </div>
+            <div class="logout">
+                <button (click)="logout()">
+                    <img style="height: 33px;" src="assets/logout.png" alt="Logout" class="logout-icon" />
+                </button>
+                <div>Logout</div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="map" style="width: 100%; height: 80vh;"></div>
+    </main>
+
+    <footer>
+        <div style="display: flex;">
+            <h3>@ 2024 copyright developed by Karthickkumar K</h3>
+        </div>
+    </footer>
+</div>
+
+<!-- Add some styles for header, footer, and card -->
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        /* Full viewport height */
+    }
+
+    header {
+        background-color: blue;
+        /* Yellow background */
+        color: #fff;
+        /* White text */
+        padding: 10px;
+    }
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        /* Space between title and logout icon */
+        align-items: center;
+        /* Center items vertically */
+        max-width: 1200px;
+        /* Optional: Set a max-width for better layout control */
+        margin: 0 auto;
+        /* Center the header content */
+    }
+
+    .title {
+        /* Allow title to take up available space */
+        text-align: center;
+        /* Center text */
+    }
+
+    .logout {
+        /* display: flex; */
+        align-items: center;
+        /* Center icon vertically */
+    }
+
+    .logout button {
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 1.5em;
+        /* Adjust size as needed */
+        cursor: pointer;
+    }
+
+    footer {
+        background-color: blue;
+        /* Blue background */
+        color: #fff;
+        /* White text */
+        padding: 10px;
+        text-align: center;
+        font-size: 0.9em;
+        margin-top: auto;
+        /* Push footer to the bottom */
+    }
+
+    main {
+        flex: 1;
+        /* Allow main content to grow and take up available space */
+        padding: 10px;
+    }
+
+    .device-card {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #f0f0f0;
+        /* Gray background */
+        display: flex;
+        justify-content: space-between;
+        /* Space between content and button */
+        align-items: center;
+        /* Center items vertically */
+    }
+
+    .device-card h3 {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    .device-card p {
+        margin: 5px 0;
+    }
+
+    .device-card button {
+        background-color: #007bff;
+        /* Blue background */
+        color: #fff;
+        /* White text */
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 1em;
+        display: flex;
+        align-items: center;
+        /* Center arrow vertically */
+    }
+
+    .device-card button .arrow {
+        margin-right: 5px;
+    }
+</style>
